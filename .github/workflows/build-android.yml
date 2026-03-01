@@ -1,7 +1,6 @@
 name: Create android Play Store APK
 on:
   push:
-    branches: [master, release/*, test/git-actions]
     tags:
       - v*
   workflow_dispatch:
