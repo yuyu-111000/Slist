@@ -1,5 +1,5 @@
-appId: superProductivity
-productName: Super Productivity
+appId: slist
+productName: Slist
 artifactName: ${name}-${arch}.${ext}
 
 files:
@@ -37,19 +37,19 @@ nsis:
 portable:
   artifactName: ${name}-${arch}.${ext}
 appx:
-  applicationId: SuperProductivity
-  displayName: Super Productivity
+  applicationId: Slist
+  displayName: Slist
   publisherDisplayName: johannesjo
   publisher: CN=___-___
   identityName: ___johannesjo.SuperProductivity
 
 linux:
   # Fix for issue #5259: Set executable name without spaces for snap compatibility
-  executableName: superproductivity
+  executableName: slist
   category: Office;ProjectManagement
   desktop:
     entry:
-      StartupWMClass: superproductivity
+      StartupWMClass: slist
   target:
     - AppImage
     - deb

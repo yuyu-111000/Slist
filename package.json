@@ -1,5 +1,5 @@
 {
-  "name": "superProductivity",
+  "name": "slist",
   "version": "17.2.4",
   "description": "ToDo list and Time Tracking",
   "keywords": [
@@ -9,13 +9,13 @@
     "GitHub",
     "Time Tracking"
   ],
-  "homepage": "https://super-productivity.com",
+  "homepage": "https://github.com/yuyu-111000/Slist",
   "repository": {
     "type": "git",
-    "url": "git://github.com/super-productivity/super-productivity.git"
+    "url": "https://github.com/yuyu-111000/Slist.git"
   },
   "license": "MIT",
-  "author": "Johannes Millan <contact@super-productivity.com> (http://super-productivity.com)",
+  "author": "Sariel",
   "main": "./electron/main.js",
   "scripts": {
     "env": "node ./tools/load-env.js",
@@ -85,11 +85,11 @@
     "lint": "npm run lint:ts && npm run lint:scss",
     "lint:ts": "ng lint",
     "lint:scss": "stylelint \"**/*.scss\" -- --custom-formatter @csstools/stylelint-formatter-github",
-    "localInstall": "sudo echo 'Starting local install' && rm -Rf ./.tmp/angular-dist/ && rm -Rf ./.tmp/app-builds/ && npm run buildAllElectron:stage && electron-builder --linux deb && sudo dpkg -i .tmp/app-builds/superProductivity*.deb",
-    "localInstall:mac": "sudo echo 'Starting local install MAC. Don`t forget APPLEID & APPLEIDPASS !!' && npm run buildAllElectron:noTests:prod && sudo echo '' && electron-builder && sudo cp -rf .tmp/app-builds/mac/superProductivity.app/ /Applications/superProductivity.app",
-    "localInstall:prod": "sudo echo 'Starting local install PROD' && rm -Rf ./.tmp/angular-dist/ && rm -Rf ./.tmp/app-builds/ && npm run buildAllElectron:prod && electron-builder --linux deb && sudo dpkg -i .tmp/app-builds/superProductivity*.deb",
-    "localInstall:quick": "sudo echo 'Starting local install QUICK' && rm -Rf ./.tmp/angular-dist/ && rm -Rf ./.tmp/app-builds/ && npm run buildFrontend:stage:es6 && npm run electron:build && electron-builder --linux deb && sudo dpkg -i .tmp/app-builds/superProductivity*.deb",
-    "localInstall:test:snap": "sudo echo 'Starting local install SNAP QUICK' && rm -Rf ./.tmp/angular-dist/ && rm -Rf ./.tmp/app-builds/ && npm run buildFrontend:stage:es6 && npm run electron:build && electron-builder --linux snap && sudo snap install --dangerous .tmp/app-builds/superProductivity*.snap",
+    "localInstall": "sudo echo 'Starting local install' && rm -Rf ./.tmp/angular-dist/ && rm -Rf ./.tmp/app-builds/ && npm run buildAllElectron:stage && electron-builder --linux deb && sudo dpkg -i .tmp/app-builds/slist*.deb",
+    "localInstall:mac": "sudo echo 'Starting local install MAC. Don`t forget APPLEID & APPLEIDPASS !!' && npm run buildAllElectron:noTests:prod && sudo echo '' && electron-builder && sudo cp -rf .tmp/app-builds/mac/Slist.app/ /Applications/Slist.app",
+    "localInstall:prod": "sudo echo 'Starting local install PROD' && rm -Rf ./.tmp/angular-dist/ && rm -Rf ./.tmp/app-builds/ && npm run buildAllElectron:prod && electron-builder --linux deb && sudo dpkg -i .tmp/app-builds/slist*.deb",
+    "localInstall:quick": "sudo echo 'Starting local install QUICK' && rm -Rf ./.tmp/angular-dist/ && rm -Rf ./.tmp/app-builds/ && npm run buildFrontend:stage:es6 && npm run electron:build && electron-builder --linux deb && sudo dpkg -i .tmp/app-builds/slist*.deb",
+    "localInstall:test:snap": "sudo echo 'Starting local install SNAP QUICK' && rm -Rf ./.tmp/angular-dist/ && rm -Rf ./.tmp/app-builds/ && npm run buildFrontend:stage:es6 && npm run electron:build && electron-builder --linux snap && sudo snap install --dangerous .tmp/app-builds/slist*.snap",
     "ng": "ng",
     "pack": "electron-builder --dir",
     "preCheck": "npm run lint && npm run test & npm run int:test && npm run e2e",
@@ -299,8 +299,8 @@
   "publish": [
     {
       "provider": "github",
-      "repo": "super-productivity",
-      "owner": "johannesjo"
+      "repo": "Slist",
+      "owner": "yuyu-111000"
     }
   ],
   "volta": {
