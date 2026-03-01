@@ -42,13 +42,15 @@ jobs:
       - name: Sync Capacitor Android project
         run: npm run sync:android
 
-      - name: Build debug APK
+      - name: Build fdroid debug APK (unsigned debug key)
         run: |
           cd android
-          ./gradlew assembleDebug
+          ./gradlew :app:assembleFdroidDebug --no-daemon --stacktrace
 
       - name: Upload debug APK artifact
         uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
         with:
           name: slist-android-debug-apk
-          path: android/app/build/outputs/apk/debug/*.apk
+          path: |
+            android/app/build/outputs/apk/fdroid/debug/*.apk
+            android/app/build/outputs/apk/debug/*.apk
